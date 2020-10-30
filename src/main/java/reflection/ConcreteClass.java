@@ -89,8 +89,6 @@ public class ConcreteClass extends BaseClass implements BaseInterface {
         Class<?> twoDStringArray = String[][].class;
         System.out.println(twoDStringArray.getCanonicalName()); // prints java.lang.String[][]
 
-
-
         Class<?> superClass = Class.forName("reflection.ConcreteClass").getSuperclass();
         System.out.println(superClass); // prints "class reflection.BaseClass"
         System.out.println(Object.class.getSuperclass()); // prints "null"

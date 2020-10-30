@@ -31,7 +31,7 @@ class Result1 {
                     String suffixString = input.substring(i);
                     String removedString = input.substring(0, i);
                     char[] suffix = suffixString.toCharArray();
-                    char[] removed =removedString.toCharArray();
+                    char[] removed = removedString.toCharArray();
                     System.out.print("remove --> " + suffixString);
                     System.out.println("  suffix --> " + removedString);
 //                    System.out.println(" boolean --> "+suffix.startsWith(removed));
@@ -39,16 +39,16 @@ class Result1 {
 //                        System.out.println(removed.length() <= 0 ? suffix.length() : removed.length());
 //                        commonLength+= removed.length() <= 0 ? suffix.length() : removed.length();
 //                    }
-                    if(removed.length <=0){
-                        commonLength+= suffix.length;
-                    }else{
+                    if (removed.length <= 0) {
+                        commonLength += suffix.length;
+                    } else {
                         for (int x = 0; x < suffix.length; x++) {
                             System.out.print("suffix value --> " + suffix[x]);
-                            System.out.println("   removed value -->" + removed[Math.floorMod(x,removed.length)]);
+                            System.out.println("   removed value -->" + removed[Math.floorMod(x, removed.length)]);
                             if (suffix[x] == removed[x % removed.length]) {
                                 System.out.println("cm -->" + commonLength);
                                 commonLength++;
-                            }else{
+                            } else {
                                 break;
                             }
                         }

@@ -31,8 +31,8 @@ public class DurationCheck {
         if (Instant.now().isBefore(validUntil)) {
             if (Instant.now().isAfter(expirationAlertTime)) {
                 int daysToExpire = (int) Duration.between(Instant.now(), validUntil).toDays();
-                System.out.println("daysToExpire -->"+daysToExpire);
-            }else{
+                System.out.println("daysToExpire -->" + daysToExpire);
+            } else {
                 System.out.println("outside loop");
             }
         }

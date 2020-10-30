@@ -9,20 +9,20 @@ class SampleDemo implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             System.out.println(threadName);
         }
     }
 
-    public void start(){
-        if(t == null){
-            t = new Thread(this,threadName);
+    public void start() {
+        if (t == null) {
+            t = new Thread(this, threadName);
             t.start();
         }
     }
 }
 
-public class TestThread{
+public class TestThread {
 
     public static void main(String[] args) {
 

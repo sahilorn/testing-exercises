@@ -13,21 +13,21 @@ public class CompareSolution extends Comparator {
         Comparator comp = new Comparator();
 
         int testCases = Integer.parseInt(scan.nextLine());
-        while(testCases-- > 0){
+        while (testCases-- > 0) {
             int condition = Integer.parseInt(scan.nextLine());
-            switch(condition){
+            switch (condition) {
                 case 1:
-                    String s1=scan.nextLine().trim();
-                    String s2=scan.nextLine().trim();
+                    String s1 = scan.nextLine().trim();
+                    String s2 = scan.nextLine().trim();
 
-                    System.out.println( (comp.compare(s1,s2)) ? "Same" : "Different" );
+                    System.out.println((comp.compare(s1, s2)) ? "Same" : "Different");
                     break;
                 case 2:
                     int num1 = scan.nextInt();
                     int num2 = scan.nextInt();
 
-                    System.out.println( (comp.compare(num1,num2)) ? "Same" : "Different");
-                    if(scan.hasNext()){ // avoid exception if this last test case
+                    System.out.println((comp.compare(num1, num2)) ? "Same" : "Different");
+                    if (scan.hasNext()) { // avoid exception if this last test case
                         scan.nextLine(); // eat space until next line
                     }
                     break;
@@ -35,15 +35,15 @@ public class CompareSolution extends Comparator {
                     // create and fill arrays
                     int[] array1 = new int[scan.nextInt()];
                     int[] array2 = new int[scan.nextInt()];
-                    for(int i = 0; i < array1.length; i++){
+                    for (int i = 0; i < array1.length; i++) {
                         array1[i] = scan.nextInt();
                     }
-                    for(int i = 0; i < array2.length; i++){
+                    for (int i = 0; i < array2.length; i++) {
                         array2[i] = scan.nextInt();
                     }
 
-                    System.out.println( comp.compare(array1, array2) ? "Same" : "Different");
-                    if(scan.hasNext()){ // avoid exception if this last test case
+                    System.out.println(comp.compare(array1, array2) ? "Same" : "Different");
+                    if (scan.hasNext()) { // avoid exception if this last test case
                         scan.nextLine(); // eat space until next line
                     }
                     break;
@@ -57,39 +57,47 @@ public class CompareSolution extends Comparator {
 
 class Comparator {
 
-    public  boolean compare(String newData, String intialData) {
+    public boolean compare(String newData, String intialData) {
         if (newData != intialData) {
-            if (newData == null || intialData == null)
+            if (newData == null || intialData == null) {
                 return false;
+            }
             return newData.equals(intialData);
         }
         return true;
     }
 
     public boolean compare(String[] newData, String[] intialData) {
-        if (newData.length != intialData.length)
+        if (newData.length != intialData.length) {
             return false;
+        }
         Set<String> anotherSet = new HashSet<>(Arrays.asList(intialData));
-        for (String currentValue : newData)
-            if (!anotherSet.contains(currentValue))
+        for (String currentValue : newData) {
+            if (!anotherSet.contains(currentValue)) {
                 return false;
+            }
+        }
         return true;
     }
 
     boolean compare(int[] newData, int[] intialData) {
-        if (newData.length != intialData.length)
+        if (newData.length != intialData.length) {
             return false;
+        }
         Set<Integer> crunchifySet = anotherSet(intialData);
-        for (int currentValue : newData)
-            if (!crunchifySet.contains(currentValue))
+        for (int currentValue : newData) {
+            if (!crunchifySet.contains(currentValue)) {
                 return false;
+            }
+        }
         return true;
     }
 
     public static Set<Integer> anotherSet(int[] cData) {
         Set<Integer> anSet = new HashSet<>();
-        for (int data : cData)
+        for (int data : cData) {
             anSet.add(data);
+        }
         return anSet;
     }
 

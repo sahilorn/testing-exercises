@@ -44,7 +44,7 @@ public class CyclicBarrierDemo {
             try {
                 System.out.println(thisThreadName + " waiting for others to reach barrier.");
                 Thread.sleep(100);
-                System.out.println("Thread waiting at barrier --> "+cyclicBarrier.getNumberWaiting());
+                System.out.println("Thread waiting at barrier --> " + cyclicBarrier.getNumberWaiting());
                 cyclicBarrier.await();
             } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();

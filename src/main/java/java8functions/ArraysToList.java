@@ -23,22 +23,22 @@ public class ArraysToList {
         System.out.println();
 
         String[] arr = Stream.of(str).toArray(String[]::new);
-        System.out.print(" arr -->"+arr);
+        System.out.print(" arr -->" + arr);
         System.out.println();
 
         /*list1.stream().collect(
                 Collectors.toMap(x -> x, countFrequencies(list1,x));
         )*/
-        Map<String,Integer> frequency = new HashMap<>();
-        frequency.put("sahil",1);
-        frequency.put("sameer",2);
+        Map<String, Integer> frequency = new HashMap<>();
+        frequency.put("sahil", 1);
+        frequency.put("sameer", 2);
 
-        frequency.forEach((k,v) ->{
-            System.out.println("Key -->"+k+ " value -->"+v);
+        frequency.forEach((k, v) -> {
+            System.out.println("Key -->" + k + " value -->" + v);
         });
 
-        Iterator<Map.Entry<String,Integer>> itr = frequency.entrySet().iterator();
-        while (itr.hasNext()){
+        Iterator<Map.Entry<String, Integer>> itr = frequency.entrySet().iterator();
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
     }

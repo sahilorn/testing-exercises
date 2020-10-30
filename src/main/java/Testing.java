@@ -3,7 +3,7 @@ public class Testing {
 
     static String str;
 
-    public void Testing(){
+    public void Testing() {
         System.out.println(" in cont");
         str = "helo";
     }
@@ -14,7 +14,11 @@ public class Testing {
     }
 }
 
-class Exc0 extends Exception{}
+class Exc0 extends Exception {
 
-class Exc1 extends Exc0{}
+}
+
+class Exc1 extends Exc0 {
+
+}
 

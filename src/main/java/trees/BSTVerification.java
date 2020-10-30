@@ -26,7 +26,6 @@ public class BSTVerification {
         //      /\   /\
         //     3  4 5  6
 
-
         HashMap<Integer, int[]> mapping2 = new HashMap<Integer, int[]>();
         int[] childrenD = {1, 4};
         int[] childrenE = {0, 2};
@@ -42,7 +41,6 @@ public class BSTVerification {
         //       1     4
         //      /\    / \
         //     0  2  5   6
-
 
         HashMap<Integer, int[]> mapping3 = new HashMap<Integer, int[]>();
         int[] childrenG = {1, 5};
@@ -60,8 +58,6 @@ public class BSTVerification {
         //      /\    / \
         //     0  2  4   6
 
-
-
         HashMap<Integer, int[]> mapping4 = new HashMap<Integer, int[]>();
         int[] childrenJ = {1, 5};
         int[] childrenK = {0, 4};
@@ -76,13 +72,11 @@ public class BSTVerification {
         //      /\
         //     0  4
 
-
-         isBST(head1);
+        isBST(head1);
         // isBST(head2) should return false
         // isBST(head3) should return true
         // isBST(head4) should return false
     }
-
 
 
     // Implement your function below.
@@ -91,8 +85,12 @@ public class BSTVerification {
     }
 
     public static boolean isBstHelper(TreeNode node, Integer lowerLim, Integer upperLim) {
-        if (lowerLim != null && node.value < lowerLim) return false;
-        if (upperLim != null && upperLim < node.value) return false;
+        if (lowerLim != null && node.value < lowerLim) {
+            return false;
+        }
+        if (upperLim != null && upperLim < node.value) {
+            return false;
+        }
         boolean isLeftBST = true;
         boolean isRightBST = true;
         if (node.left != null) {
@@ -115,14 +113,14 @@ public class BSTVerification {
         TreeNode head = new TreeNode(headValue, null, null);
         HashMap<Integer, TreeNode> nodes = new HashMap<Integer, TreeNode>();
         nodes.put(headValue, head);
-        for(Integer key : mapping.keySet()) {
+        for (Integer key : mapping.keySet()) {
             int[] value = mapping.get(key);
             TreeNode leftChild = new TreeNode(value[0], null, null);
             TreeNode rightChild = new TreeNode(value[1], null, null);
             nodes.put(value[0], leftChild);
             nodes.put(value[1], rightChild);
         }
-        for(Integer key : mapping.keySet()) {
+        for (Integer key : mapping.keySet()) {
             int[] value = mapping.get(key);
             nodes.get(key).left = nodes.get(value[0]);
             nodes.get(key).right = nodes.get(value[1]);

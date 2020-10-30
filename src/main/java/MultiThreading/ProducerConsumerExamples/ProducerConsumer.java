@@ -1,6 +1,6 @@
 // Java program to implement solution of producer
 // consumer problem.
-package MultiThreading;
+package MultiThreading.ProducerConsumerExamples;
 
 import java.util.LinkedList;
 
@@ -33,7 +33,6 @@ public class ProducerConsumer {
         // Start both threads
         t2.start();
         t1.start();
-
 
         // t1 finishes before t2
         //t1.join();

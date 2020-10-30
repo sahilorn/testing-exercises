@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 public class JoiningThreadExample {
 
     public static void main(String[] args) throws InterruptedException {
@@ -35,6 +36,7 @@ public class JoiningThreadExample {
     }
 
     public static class FactorialThread extends Thread {
+
         private long inputNumber;
         private BigInteger result = BigInteger.ZERO;
         private boolean isFinished = false;
