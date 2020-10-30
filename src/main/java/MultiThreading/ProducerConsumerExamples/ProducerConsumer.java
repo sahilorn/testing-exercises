@@ -1,6 +1,6 @@
 // Java program to implement solution of producer
 // consumer problem.
-package MultiThreading;
+package MultiThreading.ProducerConsumerExamples;
 
 import java.util.LinkedList;
 

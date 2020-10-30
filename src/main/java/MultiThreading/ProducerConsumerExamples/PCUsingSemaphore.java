@@ -1,4 +1,4 @@
-package MultiThreading;
+package MultiThreading.ProducerConsumerExamples;
 
 import java.util.concurrent.Semaphore;
 

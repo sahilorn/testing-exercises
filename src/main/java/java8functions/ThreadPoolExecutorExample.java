@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class ThreadPoolExecutorExample implements Runnable{
+public class ThreadPoolExecutorExample implements Runnable {
 
     private ThreadPoolExecutor executor;
     private int seconds;
@@ -43,20 +43,21 @@ public class ThreadPoolExecutorExample implements Runnable{
         }
     }
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException {
         //RejectedExecutionHandler implementation
         RejectedExecutionHandlerImpl rejectionHandler = new RejectedExecutionHandlerImpl();
         //Get the ThreadFactory implementation to use
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
         //creating the ThreadPoolExecutor
-        ThreadPoolExecutor executorPool = new ThreadPoolExecutor(2, 4, 10, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(3), threadFactory, rejectionHandler);
+        ThreadPoolExecutor executorPool = new ThreadPoolExecutor(2, 4, 10, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<Runnable>(3), threadFactory, rejectionHandler);
         //start the monitoring thread
         ThreadPoolExecutorExample monitor = new ThreadPoolExecutorExample(executorPool, 3);
         Thread monitorThread = new Thread(monitor);
         monitorThread.start();
         //submit work to the thread pool
-        for(int i=1; i<=10; i++){
-            executorPool.execute(new WorkerThread("cmd"+i));
+        for (int i = 1; i <= 10; i++) {
+            executorPool.execute(new WorkerThread("cmd" + i));
         }
 
         Thread.sleep(30000);
@@ -81,15 +82,15 @@ class WorkerThread implements Runnable {
 
     private String command;
 
-    public WorkerThread(String s){
-        this.command=s;
+    public WorkerThread(String s) {
+        this.command = s;
     }
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName()+" Start. Command = "+command);
+        System.out.println(Thread.currentThread().getName() + " Start. Command = " + command);
         processCommand();
-        System.out.println(Thread.currentThread().getName()+" End.");
+        System.out.println(Thread.currentThread().getName() + " End.");
     }
 
     private void processCommand() {
@@ -101,7 +102,7 @@ class WorkerThread implements Runnable {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.command;
     }
 }
