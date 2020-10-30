@@ -6,17 +6,17 @@ import java.util.Comparator;
 public class Compares {
 
     public static void main(String[] args) {
-        String[] cities = {"Bangalore","Pune","San Francisco","New York"};
+        String[] cities = {"Bangalore", "Pune", "San Francisco", "New York"};
         MySort ms = new MySort();
-        Arrays.sort(cities,ms);
-        for(String city :cities){
+        Arrays.sort(cities, ms);
+        for (String city : cities) {
             System.out.println("cities " + city);
         }
 
         System.out.println(Arrays.binarySearch(cities, "New York"));
     }
 
-    static class MySort implements Comparator<String>{
+    static class MySort implements Comparator<String> {
 
 //        @Override
 //        public int compare(String o1, String o2) {

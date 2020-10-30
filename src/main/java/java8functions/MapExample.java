@@ -17,9 +17,10 @@ public class MapExample {
             ss.add(s);
             return ss;
         }).collect(Collectors.toList());
-        for(List<String>s :collect){
+        for (List<String> s : collect) {
             System.out.println("values ->" + s.toString());
         }
+        System.out.println(collect.toString());
         List<String> collect1 = collect.stream().flatMap(Collection::stream).collect(Collectors.toList());
 
         System.out.println(collect1.toString());

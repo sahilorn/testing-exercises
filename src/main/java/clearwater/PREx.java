@@ -11,9 +11,9 @@ public class PREx {
         todo.add("laun");
         todo.add("bills");
         todo.offer("bills");
-        System.out.print(todo.size() + " "+  todo.poll());
+        System.out.print(todo.size() + " " + todo.poll());
         System.out.print(todo.peek() + " " + todo.poll());
-        System.out.println(" " + todo.poll() + " " + todo.poll()  );
+        System.out.println(" " + todo.poll() + " " + todo.poll());
 
     }
 }

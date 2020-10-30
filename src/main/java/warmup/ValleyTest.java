@@ -7,7 +7,7 @@ import java.util.List;
 public class ValleyTest {
 
     public static void main(String[] args) {
-        System.out.println(countingValleys(12,"DDUUDDUDUUUD"));
+        System.out.println(countingValleys(12, "DDUUDDUDUUUD"));
     }
 
     static int countingValleys(int n, String s) {
@@ -27,9 +27,7 @@ public class ValleyTest {
                 }
             }
 
-
             //crossed = vallayCross / 2;
-
 
             return vallayCross;
         } else {

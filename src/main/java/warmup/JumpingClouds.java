@@ -65,7 +65,7 @@ public class JumpingClouds {
                     } else if (c[i] == 0) {
                         position.add(i);
                     }
-                }else if(!position.contains(i)){
+                } else if (!position.contains(i)) {
                     if (c[i - 1] == 0 && c[i] == 0 && c[i + 1] == 0) {
                         position.add(i + 1);
                     } else if (c[i] == 0) {

@@ -34,7 +34,6 @@ public class ProducerConsumer {
         t2.start();
         t1.start();
 
-
         // t1 finishes before t2
         //t1.join();
         //t1.join();

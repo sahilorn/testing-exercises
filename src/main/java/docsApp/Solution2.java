@@ -99,12 +99,12 @@ class LineList implements ListOfLines {
     @Override
     public Vector<Line> getLinesFromStartingPoint(Point p) {
         Vector<Line> lines2 = new Vector<Line>();
-        for(Line line:lines){
-            if(line.getStart().getX() == p.getX() && line.getStart().getY() == p.getY()){
+        for (Line line : lines) {
+            if (line.getStart().getX() == p.getX() && line.getStart().getY() == p.getY()) {
                 lines2.add(line);
             }
         }
-        return  lines2;
+        return lines2;
     }
 
     @Override
@@ -114,7 +114,7 @@ class LineList implements ListOfLines {
         for (Line line : lines) {
             double length = Math.sqrt(Math.pow((line.getStart().getX() - line.getEnd().getX()), 2) + Math
                     .pow((line.getStart().getY() - line.getEnd().getY()), 2));
-            if(length > maxLength){
+            if (length > maxLength) {
                 maxLength = length;
                 maxLine = line;
             }

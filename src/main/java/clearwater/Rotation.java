@@ -17,7 +17,7 @@ public class Rotation {
         height.add(3);
         height.add(4);
         height.add(1);
-        for (Integer i : height){
+        for (Integer i : height) {
             height2.add(i);
         }
         System.out.println(" original heith " + height.toString());
@@ -27,7 +27,6 @@ public class Rotation {
 ////            sum
 ////        }
     }
-
 
 
 }

@@ -19,7 +19,7 @@ public class TreeSetExample {
 
         // Check if an element exists in the TreeSet
         String name = "Julia";
-        if(students.contains(name)) {
+        if (students.contains(name)) {
             System.out.println("TreeSet contains the element : " + name);
         } else {
             System.out.println("TreeSet does not contain the element : " + name);
@@ -30,8 +30,8 @@ public class TreeSetExample {
         System.out.println("Last element : " + students.last());
 
         name = "Robert";
-        System.out.println("Element just greater than "  + name + " : " + students.higher(name));
-        System.out.println("Element just lower than "  + name + " : " + students.lower(name));
+        System.out.println("Element just greater than " + name + " : " + students.higher(name));
+        System.out.println("Element just lower than " + name + " : " + students.lower(name));
 
     }
 

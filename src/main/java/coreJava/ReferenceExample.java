@@ -3,32 +3,32 @@ package coreJava;
 
 class Father {
 
-    static{
+    static {
         System.out.println("1");
     }
 
-    Father(){
+    Father() {
         System.out.println("2");
     }
 
-    String something(){
+    String something() {
         System.out.println("5");
         return "5";
     }
 
 }
 
-public class ReferenceExample extends Father{
+public class ReferenceExample extends Father {
 
-    static{
+    static {
         System.out.println("3");
     }
 
-    ReferenceExample(){
+    ReferenceExample() {
         System.out.println("4");
     }
 
-    String something(){
+    String something() {
         return "6";
     }
 

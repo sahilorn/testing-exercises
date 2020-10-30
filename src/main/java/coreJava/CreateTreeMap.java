@@ -31,8 +31,9 @@ public class CreateTreeMap {
         fileExtensions1.put("java", ".java");
         //fileExtensions1.put(null, "1");
         System.out.println("FileExtensions1 -->" + fileExtensions1.toString());
-         for(String s :fileExtensions.values())
-             System.out.println(" values -->" + s);
+        for (String s : fileExtensions.values()) {
+            System.out.println(" values -->" + s);
+        }
 
 
     }

@@ -80,13 +80,13 @@ class Result {
 
         if (arr.size() > 1) {
 
-            System.out.println(" Initial Array --> "+ arr);
+            System.out.println(" Initial Array --> " + arr);
             for (List<Integer> op : operations) {
                 Integer swap = 0;
-                System.out.println("1st Element -->" + op.get(0) + " 2nd Element --> "+ op.get(1));
+                System.out.println("1st Element -->" + op.get(0) + " 2nd Element --> " + op.get(1));
                 if (op.get(0) != null && op.get(1) != null && op.get(0) >= 0 && op.get(1) < arr.size()
                         && op.get(0) < op.get(1)) {
-                    System.out.println("1st value -->" + arr.get(op.get(0)) + " 2nd Value --> "+ arr.get(op.get(1)));
+                    System.out.println("1st value -->" + arr.get(op.get(0)) + " 2nd Value --> " + arr.get(op.get(1)));
                     swap = arr.get(op.get(0));
                     arr.set(op.get(0), arr.get(op.get(1)));
                     arr.set(op.get(1), swap);
