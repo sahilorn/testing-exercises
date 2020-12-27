@@ -1,4 +1,4 @@
-public class ImplC extends BaseC implements BaseI{
+public class ImplC extends BaseC implements BaseI {
 
     public static void main(String[] args) {
         (new ImplC()).method();
@@ -6,12 +6,14 @@ public class ImplC extends BaseC implements BaseI{
 }
 
 
-interface BaseI{
+interface BaseI {
+
     void method();
 }
 
-class BaseC{
-    public void method(){
+class BaseC {
+
+    public void method() {
         System.out.println(" HI");
     }
 }

@@ -8,7 +8,7 @@ public class ArrayRotationOfAnotherArray {
         int[] array2a = {4, 5, 6, 7, 8, 1, 2, 3};
         // isRotation(array1, array2a) should return false.
         int[] array2b = {4, 5, 6, 7, 1, 2, 3};
-         isRotation(array1, array2b);
+        isRotation(array1, array2b);
         int[] array2c = {4, 5, 6, 9, 1, 2, 3};
         // isRotation(array1, array2c) should return false.
         int[] array2d = {4, 6, 5, 7, 1, 2, 3};
@@ -21,7 +21,9 @@ public class ArrayRotationOfAnotherArray {
 
     // Implement your solution below.
     public static Boolean isRotation(int[] array1, int[] array2) {
-        if (array1.length != array2.length) return false;
+        if (array1.length != array2.length) {
+            return false;
+        }
         int keyValue = array1[0];
         int keyLoc = -1;
         for (int i = 0; i < array2.length; i++) {
@@ -30,11 +32,15 @@ public class ArrayRotationOfAnotherArray {
                 break;
             }
         }
-        if (keyLoc == -1) return false;
+        if (keyLoc == -1) {
+            return false;
+        }
 
         for (int i = 0; i < array1.length; i++) {
             int j = (keyLoc + i) % array1.length;
-            if (array1[i] != array2[j]) return false;
+            if (array1[i] != array2[j]) {
+                return false;
+            }
         }
         return true;
     }

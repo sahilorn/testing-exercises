@@ -12,14 +12,12 @@ public class FJRecursiveTask {
     static int[] array = randomArray();
 
     public static void main(String[] args) {
-        System.out.println("available processors"+Runtime.getRuntime().availableProcessors());
+        System.out.println("available processors" + Runtime.getRuntime().availableProcessors());
         ArrayCounter mainTask = new ArrayCounter(array, 0, SIZE);
         ForkJoinPool pool = ForkJoinPool.commonPool();
 
-
-
         Integer evenNumberCount = pool.invoke(mainTask);
-        System.out.println("pool size " +pool.getParallelism());
+        System.out.println("pool size " + pool.getParallelism());
         InnerRunnableClass inr = new InnerRunnableClass();
         pool.execute(inr);
         InnerCallableClass inc = new InnerCallableClass();

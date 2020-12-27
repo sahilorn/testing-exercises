@@ -4,10 +4,10 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] intArray = new int[]{3, 2, 4};
-         int[] another = twoSum(intArray, 6);
-         for(int i:another){
-             System.out.print(i);
-         }
+        int[] another = twoSum(intArray, 6);
+        for (int i : another) {
+            System.out.print(i);
+        }
     }
 
     public static int[] twoSum(int[] nums, int target) {

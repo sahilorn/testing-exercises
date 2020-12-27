@@ -64,7 +64,7 @@ public class TwoDimArrayFindOut {
 //                    ar1[i][j] = arr[i][x+j];
 //                }
             }
-            sum-= (ar1[1][0] + ar1[1][2]);
+            sum -= (ar1[1][0] + ar1[1][2]);
             if (sum > maxValue) {
                 maxValue = sum;
             }
@@ -107,7 +107,7 @@ public class TwoDimArrayFindOut {
 //                    ar1[i][j] = arr[i][x+j];
 //                }
             }
-            sum1-= (ar3[1][0] + ar3[1][2]);
+            sum1 -= (ar3[1][0] + ar3[1][2]);
             if (sum1 > maxValue) {
                 maxValue = sum1;
             }
@@ -122,7 +122,7 @@ public class TwoDimArrayFindOut {
                     sum1 += ar4[i][j];
                 }
             }
-            sum1-= (ar4[1][0] + ar4[1][2]);
+            sum1 -= (ar4[1][0] + ar4[1][2]);
             if (sum1 > maxValue) {
                 maxValue = sum1;
             }

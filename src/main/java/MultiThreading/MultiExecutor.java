@@ -2,11 +2,11 @@ package MultiThreading;
 
 import java.util.List;
 
-class WorkerExecutor implements Runnable{
+class WorkerExecutor implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(" running from "+Thread.currentThread().getName());
+        System.out.println(" running from " + Thread.currentThread().getName());
     }
 }
 
@@ -29,9 +29,9 @@ public class MultiExecutor {
      */
     public void executeAll() {
         // complete your code here
-        for(Runnable task:tasks){
-          Thread thread = new Thread(task);
-          thread.start();
+        for (Runnable task : tasks) {
+            Thread thread = new Thread(task);
+            thread.start();
         }
     }
 

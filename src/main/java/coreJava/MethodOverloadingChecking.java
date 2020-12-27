@@ -2,7 +2,7 @@ package coreJava;
 
 public class MethodOverloadingChecking {
 
-    public static String someMethod(String s1){
+    public static String someMethod(String s1) {
         return "";
     }
 

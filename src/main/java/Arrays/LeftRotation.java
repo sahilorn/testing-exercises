@@ -54,7 +54,7 @@ public class LeftRotation {
 
     private static int[] rotLeft(int[] a, int d) {
         int[] b = new int[a.length];
-        if( d>=1 && d <= a.length){
+        if (d >= 1 && d <= a.length) {
             for (int i = 0; i < a.length; i++) {
                 int index = (a.length + d + i) % a.length;
                 System.out.println(" i " + i + " will get " + index);

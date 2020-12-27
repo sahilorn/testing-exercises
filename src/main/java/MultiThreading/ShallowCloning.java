@@ -2,30 +2,26 @@ package MultiThreading;
 
 public class ShallowCloning {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         EduCourse j2ee = new EduCourse("Java", "Spring", "Microservices");
 
         EduLearner learner1 = new EduLearner(2811, "Max", j2ee);
 
         EduLearner learner2 = null;
 
-        try
-        {
+        try {
             //Creating a clone of learner1 and assigning it to learner2
 
             learner2 = (EduLearner) learner1.clone();
-        }
-        catch (CloneNotSupportedException e)
-        {
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
 
         //Printing Details of Learner1
         System.out.println("Details of Learner 1: ");
-        System.out.println("Id: "+learner1.eduId);
-        System.out.println("Name: "+learner1.leaderName);
-        System.out.println("Course Id: "+learner1.eduCourse);
+        System.out.println("Id: " + learner1.eduId);
+        System.out.println("Name: " + learner1.leaderName);
+        System.out.println("Course Id: " + learner1.eduCourse);
 
         //Printing all the courses of 'learner1'
         System.out.println("Courses of Learner 1: ");
@@ -35,10 +31,9 @@ public class ShallowCloning {
 
         //Printing Details of Learner2
         System.out.println("Details of Learner 2: ");
-        System.out.println("Id: "+learner2.eduId);
-        System.out.println("Name: "+learner2.leaderName);
-        System.out.println("Course Id: "+learner2.eduCourse);
-
+        System.out.println("Id: " + learner2.eduId);
+        System.out.println("Name: " + learner2.leaderName);
+        System.out.println("Course Id: " + learner2.eduCourse);
 
         //Printing all the courses of 'learner2'
         System.out.println("Courses of Learner 2: ");
@@ -57,13 +52,13 @@ public class ShallowCloning {
     }
 
 
-
 }
 
-class EduLearner implements Cloneable{
-     int eduId;
-     String leaderName;
-     EduCourse eduCourse;
+class EduLearner implements Cloneable {
+
+    int eduId;
+    String leaderName;
+    EduCourse eduCourse;
 
 
     public EduLearner(int eduId, String leaderBoard, EduCourse eduCourse) {
@@ -72,8 +67,8 @@ class EduLearner implements Cloneable{
         this.eduCourse = eduCourse;
     }
 
-    protected Object clone() throws CloneNotSupportedException{
-        return  super.clone();
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
 
@@ -83,8 +78,7 @@ class EduCourse {
     String course2;
     String course3;
 
-    public EduCourse(String crs1, String crs2, String crs3)
-    {
+    public EduCourse(String crs1, String crs2, String crs3) {
         this.course1 = crs1;
 
         this.course2 = crs2;

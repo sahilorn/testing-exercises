@@ -4,10 +4,9 @@ public class BalancedArray {
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[]{1,1,1,2,1,1,1};
+        int[] intArray = new int[]{1, 1, 1, 2, 1, 1, 1};
 
         int middle = intArray.length / 2;
-
 
         for (int k = middle; k < intArray.length; k++) {
             int sumFwd = 0;
@@ -24,9 +23,9 @@ public class BalancedArray {
             System.out.println();
             System.out.println(" sumFwd " + sumFwd);
             System.out.println("sumBack" + sumBack);
-            if(sumFwd == sumBack){
-                System.out.println(" pivot value is"+k);
-              break;
+            if (sumFwd == sumBack) {
+                System.out.println(" pivot value is" + k);
+                break;
             }
 
         }

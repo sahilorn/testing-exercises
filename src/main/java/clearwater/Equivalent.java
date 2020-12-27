@@ -30,75 +30,75 @@ class Result1 {
         Map<String, Map<String, Integer>> t1 = new HashMap<>();
         createHashMap(t, t1);
         Map<String, Map<String, Integer>> s1 = new HashMap<>();
-        s1 = createHashMap(s,s1);
+        s1 = createHashMap(s, s1);
         List<String> finalList = new ArrayList<>();
         print(t1);
         print(s1);
-            int sum = 0;
+        int sum = 0;
 
-            for (int i = 0; i < s.size(); i++) {
+        for (int i = 0; i < s.size(); i++) {
 
-                Map<String, Integer> s2 = s1.get(s.get(i));
-                Map<String, Integer> t2 = t1.get(t.get(i));
-                for (String innerAlpha : s2.keySet()) {
-                    if(s2.get(innerAlpha) != null && t2.get(innerAlpha) != null){
-                        int value = Math.abs(s2.get(innerAlpha) - t2.get(innerAlpha));
-                        if (value <= 3) {
-                            sum++;
-                        }
-                    }else if(s2.get(innerAlpha) == null){
-                        int value = t2.get(innerAlpha);
-                        if (value <= 3) {
-                            sum++;
-                        }
-                    }else if(t2.get(innerAlpha) == null){
-                        int value = s2.get(innerAlpha);
-                        if (value <= 3) {
-                            sum++;
-                        }
+            Map<String, Integer> s2 = s1.get(s.get(i));
+            Map<String, Integer> t2 = t1.get(t.get(i));
+            for (String innerAlpha : s2.keySet()) {
+                if (s2.get(innerAlpha) != null && t2.get(innerAlpha) != null) {
+                    int value = Math.abs(s2.get(innerAlpha) - t2.get(innerAlpha));
+                    if (value <= 3) {
+                        sum++;
+                    }
+                } else if (s2.get(innerAlpha) == null) {
+                    int value = t2.get(innerAlpha);
+                    if (value <= 3) {
+                        sum++;
+                    }
+                } else if (t2.get(innerAlpha) == null) {
+                    int value = s2.get(innerAlpha);
+                    if (value <= 3) {
+                        sum++;
                     }
                 }
-                for (String innerAlpha : t2.keySet()) {
-                    if(t2.get(innerAlpha) != null && s2.get(innerAlpha) != null){
-                        int value = Math.abs(s2.get(innerAlpha) - t2.get(innerAlpha));
-                        if (value <= 3) {
-                            sum++;
-                        }
-                    }else if(t2.get(innerAlpha) == null){
-                        int value = s2.get(innerAlpha);
-                        if (value <= 3) {
-                            sum++;
-                        }
-                    }else if(s2.get(innerAlpha) == null){
-                        int value = t2.get(innerAlpha);
-                        if (value <= 3) {
-                            sum++;
-                        }
+            }
+            for (String innerAlpha : t2.keySet()) {
+                if (t2.get(innerAlpha) != null && s2.get(innerAlpha) != null) {
+                    int value = Math.abs(s2.get(innerAlpha) - t2.get(innerAlpha));
+                    if (value <= 3) {
+                        sum++;
                     }
-                }
-
-                if (sum == (s2.keySet().size()+t2.keySet().size())) {
-                    finalList.add("YES");
-                } else {
-                    finalList.add("NO");
+                } else if (t2.get(innerAlpha) == null) {
+                    int value = s2.get(innerAlpha);
+                    if (value <= 3) {
+                        sum++;
+                    }
+                } else if (s2.get(innerAlpha) == null) {
+                    int value = t2.get(innerAlpha);
+                    if (value <= 3) {
+                        sum++;
+                    }
                 }
             }
 
+            if (sum == (s2.keySet().size() + t2.keySet().size())) {
+                finalList.add("YES");
+            } else {
+                finalList.add("NO");
+            }
+        }
 
-
-    return finalList;
+        return finalList;
 
     }
 
     private static void print(Map<String, Map<String, Integer>> t1) {
-        for(String s:t1.keySet()){
-            Map<String,Integer> s1 = t1.get(s);
-            for(String s2:s1.keySet())
-            System.out.println(" key -->" +s2 + " value -->" + s1.get(s2));
+        for (String s : t1.keySet()) {
+            Map<String, Integer> s1 = t1.get(s);
+            for (String s2 : s1.keySet()) {
+                System.out.println(" key -->" + s2 + " value -->" + s1.get(s2));
+            }
         }
     }
 
-    private static Map<String, Map<String, Integer>> createHashMap(List<String> s, Map<String, Map<String, Integer>> s1) {
+    private static Map<String, Map<String, Integer>> createHashMap(List<String> s,
+            Map<String, Map<String, Integer>> s1) {
         for (String word : s) {
             HashMap<String, Integer> smaller = new HashMap<>();
             for (String alpha : word.split("")) {
@@ -109,8 +109,6 @@ class Result1 {
         return s1;
     }
 }
-
-
 
 
 public class Equivalent {
@@ -142,7 +140,7 @@ public class Equivalent {
                 .collect(toList());
 
         List<String> result = Result1.areAlmostEquivalent(s, t);
-        System.out.println(" result -->"+result);
+        System.out.println(" result -->" + result);
 
         bufferedWriter.write(
                 result.stream()

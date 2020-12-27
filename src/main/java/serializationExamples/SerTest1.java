@@ -8,7 +8,9 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class superclass {
+
     int i;
+
     public superclass(int i) {
         this.i = i;
     }
@@ -19,13 +21,17 @@ class superclass {
 }
 
 class subclass extends superclass implements Serializable {
+
     int j;
+
     public subclass(int i, int j) {
         super(i);
         this.j = j;
     }
 }
+
 public class SerTest1 {
+
     public static void main(String[] args) throws Exception {
         subclass b1 = new subclass(10, 20);
         System.out.println("i = " + b1.i);

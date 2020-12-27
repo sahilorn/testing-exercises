@@ -27,7 +27,6 @@ public class LowestCommonAncestor {
         //      /\   /\
         //     3  4 5  6
 
-
         HashMap<Integer, int[]> mapping2 = new HashMap<Integer, int[]>();
         int[] childrenD = {1, 4};
         int[] childrenE = {3, 8};
@@ -48,8 +47,7 @@ public class LowestCommonAncestor {
         //    /\
         //   6  7
 
-
-         lca(head1, 1, 5) ;
+        lca(head1, 1, 5);
         // lca(head1, 3, 1) should return 1
         // lca(head1, 1, 4) should return 1
         // lca(head1, 0, 5) should return 0
@@ -118,14 +116,14 @@ public class LowestCommonAncestor {
         TreeNode head = new TreeNode(headValue, null, null);
         HashMap<Integer, TreeNode> nodes = new HashMap<Integer, TreeNode>();
         nodes.put(headValue, head);
-        for(Integer key : mapping.keySet()) {
+        for (Integer key : mapping.keySet()) {
             int[] value = mapping.get(key);
             TreeNode leftChild = new TreeNode(value[0], null, null);
             TreeNode rightChild = new TreeNode(value[1], null, null);
             nodes.put(value[0], leftChild);
             nodes.put(value[1], rightChild);
         }
-        for(Integer key : mapping.keySet()) {
+        for (Integer key : mapping.keySet()) {
             int[] value = mapping.get(key);
             nodes.get(key).left = nodes.get(value[0]);
             nodes.get(key).right = nodes.get(value[1]);

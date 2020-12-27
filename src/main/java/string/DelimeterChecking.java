@@ -6,8 +6,8 @@ public class DelimeterChecking {
         String acr = "sahil:";
         String[] stringList = acr.split(":");
         System.out.println(stringList.length);
-        for(String i: stringList){
-            System.out.println("value -->" +i);
+        for (String i : stringList) {
+            System.out.println("value -->" + i);
         }
 
     }

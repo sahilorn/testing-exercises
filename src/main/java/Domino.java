@@ -18,7 +18,7 @@ public class Domino {
 
     public static void main(String[] args) {
         // This creates the Array
-        Domino[] dominos = new Domino[] {
+        Domino[] dominos = new Domino[]{
                 new Domino(4, 3),
                 new Domino(3, 4),
                 new Domino(1, 2),

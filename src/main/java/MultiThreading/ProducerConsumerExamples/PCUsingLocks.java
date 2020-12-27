@@ -84,7 +84,7 @@ class ProducerLock extends Thread {
     @Override
     public void run() {
         try {
-            for(int i=0;i<10;i++){
+            for (int i = 0; i < 10; i++) {
                 pc.put(i);
             }
 
@@ -106,7 +106,7 @@ class ConsumerLock extends Thread {
     @Override
     public void run() {
         try {
-            for(int i=0;i<10;i++){
+            for (int i = 0; i < 10; i++) {
                 pc.get();
             }
         } catch (InterruptedException e) {

@@ -1,7 +1,6 @@
 import java.util.UUID;
 
-public class UUIDTester
-{
+public class UUIDTester {
 
     public static void main(String[] args) {
 

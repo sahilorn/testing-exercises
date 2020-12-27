@@ -21,7 +21,8 @@ public class FrequencyOfIntegersInArray {
 
     // Implement your solution below.
     public static Integer mostFreqent(int[] givenArray) {
-        Integer maxCount = -1; Integer maxItem = null;
+        Integer maxCount = -1;
+        Integer maxItem = null;
         HashMap<Integer, Integer> count = new HashMap<Integer, Integer>();
         for (int i : givenArray) {
             if (count.containsKey(i)) {
